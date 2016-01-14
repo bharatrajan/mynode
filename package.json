@@ -1,6 +1,6 @@
 {
   "name": "comcast",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Bharat's node.js traning and local app server for API provisioning",
   "main": "scripts.js",
   "dependencies": {
@@ -17,5 +17,13 @@
     "start": "node server.js"
   },
   "author": "Bharat Rajan",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharatrajan/mynode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bharatrajan/mynode/issues"
+  },
+  "homepage": "https://github.com/bharatrajan/mynode#readme"
 }
