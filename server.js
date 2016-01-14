@@ -1,10 +1,11 @@
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser')
-var app = express()
+var app = express();
 var uuid = require('uuid');
 var mysql = require('mysql');
 
+app.use(express.static('../clientside'));
 var con = mysql.createConnection({
   "host": "localhost",
   "user": "root",
@@ -15,7 +16,7 @@ var con = mysql.createConnection({
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(cors());
+//app.use(cors());
 
 //BOOK-BLOB
 //http://stackoverflow.com/questions/10932584/array-push-makes-all-elements-the-same-when-pushing-an-object
