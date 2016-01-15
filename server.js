@@ -217,6 +217,15 @@ app.delete('/api/books/:book_id', function (req, res) {
 	
 	//Delete in Database using DAO & book_id
 	//---------------
+	var index = 0;
+	console.log(req.params.book_id);
+	console.log(app.booklist);
+	for(index=0; index < app.booklist.length; index++){
+		if(app.booklist[index].id == req.params.book_id){
+			app.booklist.splice(index, 1);
+			break;
+		}
+	}
 	
 	console.log(deleteResp);
 	res.end(JSON.stringify(deleteResp));   
