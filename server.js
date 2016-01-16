@@ -14,6 +14,7 @@ var con = mysql.createConnection({
 });
 
 
+app.use(express.static('../myclient/'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //app.use(cors());
